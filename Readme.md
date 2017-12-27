@@ -8,27 +8,22 @@
 sudo dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
 ```
 
-## WPS 依赖的字体
-
-```shell
-sudo unzip wps_symbol_fonts.zip -d /usr/share/fonts/wps-office
-```
 
 ## 安装 WPS
 
-#### apt 安装
-
-在线安装的是 9.1，不过基本也够用了
-
-```shell
-sudo apt install wps-office
-```
-
-#### 官方下载最新版本
-
-也可以去 [官方](http://wps-community.org/downloads) 下载最新版本
+推荐使用 apt 安装的版本，有点太老了，而且还是 32 位的，还有各种问题，推荐去[官方](http://wps-community.org/downloads) 下载最新版本
 
 ```shell
 wget http://kdl1.cache.wps.com/ksodl/download/linux/a21//wps-office_10.1.0.5707~a21_amd64.deb
 sudo dpkg -i wps-office_10.1.0.5707_a21_amd64.deb
+```
+
+## WPS 依赖的字体
+
+字体是从 Win7 中提取出来的，字体有点多，为了去兼容Windows下的WPS文档，就没有去除，全盘接收了。
+为了提升传输的速度，将每一个字体都通过 gzip 压缩了，所以要先将 wps-office 中的字体文件解压缩之后再复制。
+
+```shell
+gzip -r -d wps-office/
+sudo cp -r wps-office /usr/share/fonts/
 ```
