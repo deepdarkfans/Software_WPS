@@ -13,7 +13,7 @@ sudo dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
 
 本镜像中已经包含了 wps 的安装包（因为官网有时会下载很慢，所以增加了安装包），暂时是最新的（2018-01-20 ），可以先去官网查看下，如果有最新的最好安装最新版本。
 
-推荐使用 apt 安装的版本，有点太老了，而且还是 32 位的，还有各种问题，推荐去[官方](http://wps-community.org/downloads) 下载最新版本
+`不推荐` 使用 apt 安装的版本，有点太老了，而且还是 32 位的，还有各种问题，推荐去[官方](http://wps-community.org/downloads) 下载最新版本
 
 ```shell
 wget http://kdl1.cache.wps.com/ksodl/download/linux/a21//wps-office_10.1.0.5707~a21_amd64.deb
